@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Techniques
+{% endblock %}
+
+{% block menu_links_techniques_active %}
+class="active"
+{% endblock %}
+
+{% block main_content %}
+
+<div class="tech_container">
+  {% for tech in list_of_techniques %}
+  <div class="techniques">
+    <a class="project_link" href="{{url_for('projects', search_val=tech)}}">
+      <img class="techniques_image img-techniques-logo" src="{{ url_for('static', filename='images/' + tech + '.png') }}">
+      <a>{{tech.upper()}}</a>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

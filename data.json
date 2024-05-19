@@ -1,0 +1,87 @@
+[
+  {
+    "start_date": "2023-09-05",
+    "end_date": "2023-09-13",
+    "short_description": "Spelet Sokoban som terminalprogram",
+    "course_name": "Imperativ Programmering",
+    "long_description": "I kursen TDP002 skapas spelet Sokoban i terminalen, representerat med ASCII-grafik.",
+    "group_size": 2,
+    "academic_credits": "none",
+    "demo_link": "https://www.example.com",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "project_name": "Sokoban",
+    "course_id": "TDP002",
+    "project_id": 1,
+    "small_image": "images/sokoban_200x200.png",    
+    "big_image": "images/sokoban.png"
+  },
+
+  {
+    "start_date": "2023-09-01",
+    "end_date": "2023-10-18",
+    "short_description": "Skapa en blog samt bekanta sig med den egna datormiljön",
+    "course_name": "Imperativ Programmering",
+    "long_description": "För kursen TDP003 skapas en portfolio som är tänkt att kunna användas för studietidens resterande projekt. Det ingick även grundläggande hantering av en Linux miljö, saker som Git och Bash.\n\nPortfolion körs som en Flask applikation och använder en enkel JSON som projektdatabas. Hemsidan serverar dynamiskt innehåll där enbart denna JSON fil behöver uppdateras.\n\nNumera drivs denna portfolio med hjälp av Docker och Gunicorn.",
+    "group_size": 2,
+    "academic_credits": "6 HP",
+    "demo_link": "https://portfolio.reuterskiold.dev/",
+    "github_link": "https://github.com/Cinnamals/portfolio-flask",
+    "techniques_used": [
+      "Python",
+      "HTML-CSS",
+      "Bash"
+    ],
+    "project_name": "Portfolio",
+    "course_id": "TDP003",
+    "project_id": 2,
+    "small_image": "images/blog.png",    
+    "big_image": "images/blog.png"
+  },
+  
+
+  {
+    "start_date": "2023-11-12",
+    "end_date": "2023-12-15",    
+    "short_description": "Objektorienterat spel i C++",
+    "course_name": "Projekt: Objektorienterat System ",
+    "long_description": "I par skapades ett objektorienterat spel i C++. Tvådimensionell grafik med inspiration av Vampire Survivor. Det är ett utmanande överlevnadsspel när du styr en karaktär som skjuter automatiskt! Det dyker upp nya fiender under spelets gång, antalet ökar över tid vilket gör spelet allt svårare.\n \nNågra av de roligaste utmaningarna var minneshantering och applicerad matematik. Spelet hade som krav att inte innehålla några minnesläckor, vilket uppfylldes. \nTack, smarta pekare!\nApplicerad matematik krävdes för att hitta alla på spelplanen skulle hitta sin närmsta fiende. I övrigt innehöll projektet mängder av objektorientering med klass-arv.",
+    "group_size": 2,
+    "academic_credits": "6 HP",
+    "gitlab_link": "https://gitlab.liu.se/matre652/tdp005",    
+    "techniques_used": [
+      "C++",
+      "Objektorientering",
+      "Bash"
+    ],
+    "project_name": "Scuffed Survivor",
+    "course_id": "TDP005",
+    "project_id": 3,
+    "small_image": "images/gameplay-overrun.png",    
+    "big_image": "images/game.gif"
+  },
+
+  {
+    "start_date": "2024-02-07",
+    "end_date": "2024-05-28",    
+    "short_description": "Konstruktion av eget datorspråk",
+    "course_name": "Projekt Datorspråk",
+    "long_description": "[alphalang] är ett nybörjarvänligt programmeringsspråk med stöd för flera (många) talspråk. Nyckelorden i [alphalang] är utbytbara, modulära och utformas av dig. \nEftersom du själv väljer språket på alla nyckelord, finns inte längre ett krav på att förstå engelska. \n\nOrd som “while” kan du friktionsfritt byta till “medan”, med ett interaktivt stöd i terminalen. Efter installationen kan du direkt använda [alphalang] i talspråk som Tyska, Svenska, Engelska och sist men inte minst -- Emoji.",
+    "group_size": 2,
+    "academic_credits": "10 HP",
+    "gitlab_link": "https://gitlab.liu.se/matre652/tdp019",
+    "github_link": "https://github.com/Cinnamals/alphalang/",
+    "techniques_used": [
+      "Ruby",
+      "Bash",
+      "Objektorientering"
+    ],
+    "project_name": "[alphalang]",
+    "course_id": "TDP019",
+    "project_id": 4,
+    "small_image": "images/alphalang.png",    
+    "big_image": "images/alphalang_big.png"
+  }    
+]

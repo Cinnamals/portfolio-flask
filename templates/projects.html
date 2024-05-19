@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block menu_links_projects_active %}
+class="active"
+{% endblock %}
+
+{% block main_content %}
+
+<div class="search-big" id="big-box">
+  <form action="{{url_for('search_site')}}" method="post" style="display: inline;">
+
+    <div class="search-bar-container" id="search-bar-container"> 
+      <input type="text" id="searchterm-big" name="searchterm" placeholder="Search term..." style="font-family:trial;">
+      <label for="clear-button" class="image-button clear-button">
+        <img src="{{ url_for('static', filename='images/clear.png') }}" alt="Clear" style="width: 50px;">
+      </label>
+      <label for="submit-button" class="image-button submit-button">
+        <img src="{{ url_for('static', filename='images/submit.png') }}" alt="Submit" style="width: 60px;">
+      </label>      
+      <input type="reset" id="clear-button" value="Clear">
+      <input type="submit" id="submit-button" value="Submit">
+
+      <div class="button-container">
+        <div class="dropdown-checkboxes">
+          <button class="image-button techniques-button"><h5>Techniques:</h5></button>
+          <div class="dropdown-content" id="spec">
+            {% for field in list_of_techniques %}
+            <checkbox>
+              <input type="checkbox" name="tech" id="tech" value="{{field}}">{{field.title()}}<br>
+            </checkbox>
+            {% endfor %}
+          </div>
+        </div> <!-- end of dropdown-checkboxes -->
+
+        <div class="dropdown-checkboxes">
+          <button class="image-button searchfield-button"><h5>Allowed searchfields:</h5></button>
+          <div class="dropdown-content" id="spec2">
+            {% for field in list_of_fields %}
+            <checkbox>
+              <input type="checkbox" name="f" id="f" value="{{field}}">{{field.replace('_', ' ').title() }}<br>
+            </checkbox>
+            {% endfor %}
+          </div>
+        </div> <!-- end of dropdown-checkboxes -->
+        
+      </div> <!-- end of button-container -->
+    </div> <!-- end of search-bar-container -->
+  </form>
+</div>
+
+<div class="tech_container">
+  {% for project in list_of_projects %}
+  <a href="{{url_for('project', project_id=project.project_id)}}">
+    <div class="tech">
+      <img class="small_image" src="{{url_for('static', filename=project.small_image)}}" alt="{{project.project_name}}">
+      <h5 class="small_project_title">{{project.project_name}}</h5>
+      
+      {% if project.demo_link %}
+      <a href="{{project.demo_link}}" class="button" target="_blank">Demo</a>
+      {% endif %}
+      
+      {% if project.github_link %}
+      <a href="{{project.github_link}}" class="button" target="_blank">GitHub</a>
+      {% endif %}
+
+      {% if project.gitlab_link %}
+      <a href="{{project.gitlab_link}}" class="button" target="_blank">GitLab</a>
+      {% endif %}
+      
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}

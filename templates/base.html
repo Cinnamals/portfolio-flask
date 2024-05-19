@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <meta name="title" content="Reuterskiöld">
+    <meta name="description" content="Mattias Reuterskiöld Portfolio">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio.reuterskiold.dev/">
+    <meta property="og:title" content="Reuterskiöld">
+    <meta property="og:description" content="Mattias Reuterskiöld Portfolio">
+    <meta property="og:image" content="https://portfolio.reuterskiold.dev/static/images/logo.png">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/base_style.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    {% block head %}    {% endblock %}
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="logo">
+        <a href="{{url_for('index')}}">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Techniques">
+        </a>        
+      </div> <!-- end of logo -->
+
+      <div class="menu">
+        <a {% block menu_links_index_active %}{% endblock %}
+           href="{{url_for('index')}}">
+          <img src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
+        </a>
+        <a {% block menu_links_projects_active %}{% endblock %}
+           href="{{url_for('projects', search_val='all')}}">
+          <img src="{{ url_for('static', filename='images/projects.png') }}" alt="Projects">
+        </a>
+        <a {% block menu_links_techniques_active %}{% endblock %}
+           href="{{url_for('techniques')}}">
+          <img src="{{ url_for('static', filename='images/techniques.png') }}" alt="Techniques">
+        </a>
+      </div> <!-- end of menu -->
+      
+      <div class="main">
+        {% block main_content %}
+        {% endblock %}
+        <footer class="footer">
+          Mattias Reuterskiöld © 2024
+        </footer>  
+      </div>
+      
+    </div>      <!-- end of container -->
+  </body>
+</html>

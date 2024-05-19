@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+Reuterskiöld
+{% endblock %}
+
+{% block menu_links_index_active %}
+class="active"
+{% endblock %}
+
+{% block main_content %}
+
+<div class="main_content_welcome">
+  <div class="main_content_welcome_paragraph">  
+         <a href="{{url_for('index')}}">
+           <img src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
+         </a>
+         Touched a keyboard and never really stopped.<br>
+         <i>Alright, there were some caveats</i><div><br>
+           While being up for anything, <br><i>C++, Python and Ruby</i><br>
+           has eaten most of my days.<br><br>
+           I consider my self a mixed martial artist - dabbling in
+           <br><i><b>Software Development</b>, <b>System Administration</b></i><br>
+           and begrudingly a bit of <i><b>Frontend Development</b>.</i></div>
+  </div>
+  <div class="avatar">
+    <a href="{{url_for('index')}}">
+      <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="Techniques">
+    </a>        
+  </div>   
+</div>
+
+ <div class="main_content">
+   <p>
+Curabitur at eleifend tellus. Donec pellentesque diam rutrum justo pharetra, nec eleifend quam facilisis. Sed fermentum porta elit sed ornare. In justo metus, efficitur vel lacinia vitae, ultricies ornare dui. Sed nec augue ligula. Vestibulum finibus dui vitae mattis scelerisque. Nunc porttitor eu nisl ut porta. Sed vitae tortor sed velit eleifend bibendum at eu arcu. Ut at faucibus orci, nec fringilla tortor. Curabitur sem felis, consequat vel tincidunt nec, tempus sit amet tellus. Aliquam in lorem ipsum. Vestibulum arcu nisi, vulputate sed ultrices ac, facilisis sed lacus. Aliquam ultricies in libero at molestie.</p>
+   <p>
+          Vivamus ac ex ultricies, convallis libero non, vehicula augue. Aliquam fermentum auctor enim, ut tincidunt enim gravida nec. Pellentesque tellus risus, tempor vel sem vel, congue mattis quam. Morbi eleifend pellentesque lacinia. Phasellus gravida mauris ut placerat interdum. Donec maximus vehicula tortor eget pulvinar. Curabitur tristique rhoncus sodales. In metus metus, rutrum non scelerisque eget, facilisis eu mi. Praesent pellentesque, justo malesuada sodales lacinia, mi lorem venenatis ligula, eget faucibus eros est eu erat. Ut vulputate ante sem, in vestibulum tortor efficitur semper. Ut semper magna ac enim volutpat rhoncus.</p>
+   <p>
+     Vivamus volutpat fermentum erat convallis pulvinar. Mauris pretium, massa id rhoncus mollis, metus nunc fermentum dui, vitae pellentesque nibh tortor ac urna. Duis lobortis ex augue. Suspendisse ac eleifend augue, vitae tincidunt magna. Mauris id fermentum nibh. In risus augaue, viverra in lobortis in, iaculis et massa. In egestas quam ut nisl iaculis malesuada.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. auris sit amet commodo quam. Sed non diam tortor. Ut   pretium,  diam eget congue condimentum, tortor neque tristique erat, vel blandit augue mi sed diam. Cras facilisis massa nisi, ac   tincidunt eros pretium at. Praesent a tortor velit. Nam auctor placerat leo, vitae ultrices sem vestibulum at. Etiam id convallis quam. Aliquam venenatis a metus et dignissim. Vestibulum interdum vel enim sed venenatis. Curabitur ligula velit, dignissim placerat nunc et, malesuada fermentum nisi. Vivamus a tellus sollicitudin, viverra massa quis, commodo massa. </p>
+   <p> Sed vestibulum luctus est vestibulum egestas. Cras sit amet nisl sit amet metus hendrerit ultrices. Aliquam sollicitudin tincidunt dolor in sodales. Aenean ullamcorper nisl vel orci fermentum tristique. Suspendisse rutrum neque eu diam cursus, nec dictum nulla gravida. In accumsan feugiat sapien vel rutrum. Fusce mauris ex, tincidunt in urna a, suscipit pretium orci. Curabitur ac nulla porttitor, pellentesque justo at, dignissim nunc.</p>
+   <p>
+          Curabitur at eleifend tellus. Donec pellentesque diam rutrum justo pharetra, nec eleifend quam facilisis. Sed fermentum porta elit sed ornare. In justo metus, efficitur vel lacinia vitae, ultricies ornare dui. Sed nec augue ligula. Vestibulum finibus dui vitae mattis scelerisque. Nunc porttitor eu nisl ut porta. Sed vitae tortor sed velit eleifend bibendum at eu arcu. Ut at faucibus orci, nec fringilla tortor. Curabitur sem felis, consequat vel tincidunt nec, tempus sit amet tellus. Aliquam in lorem ipsum. Vestibulum arcu nisi, vulputate sed ultrices ac, facilisis sed lacus. Aliquam ultricies in libero at molestie.</p>
+   <p>
+          Vivamus ac ex ultricies, convallis libero non, vehicula augue. Aliquam fermentum auctor enim, ut tincidunt enim gravida nec. Pellentesque tellus risus, tempor vel sem vel, congue mattis quam. Morbi eleifend pellentesque lacinia. Phasellus gravida mauris ut placerat interdum. Donec maximus vehicula tortor eget pulvinar. Curabitur tristique rhoncus sodales. In metus metus, rutrum non scelerisque eget, facilisis eu mi. Praesent pellentesque, justo malesuada sodales lacinia, mi lorem venenatis ligula, eget faucibus eros est eu erat. Ut vulputate ante sem, in vestibulum tortor efficitur semper. Ut semper magna ac enim volutpat rhoncus.</p>
+   <p>
+          Vivamus volutpat fermentum erat convallis pulvinar. Mauris pretium, massa id rhoncus mollis, metus nunc fermentum dui, vitae pellentesque nibh tortor ac urna. Duis lobortis ex augue. Suspendisse ac eleifend augue, vitae tincidunt magna. Mauris id fermentum nibh. In risus augaue, viverra in lobortis in, iaculis et massa. In egestas quam ut nisl iaculis malesuada.</p>
+ </div>
+
+ <div class="logo">
+   <a href="{{url_for('index')}}">
+     <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Techniques">
+   </a>        
+ </div>
+
+{% endblock %}
