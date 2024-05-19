@@ -19,3 +19,8 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Push the Docker image
       run: docker push cinnamals/portfolio-liu
+    - name: Trigger Portainer stack update
+      run: |
+        curl -X POST ${PORTAINER_WEBHOOK_URL}
+      env:
+        PORTAINER_WEBHOOK_URL: ${{ secrets.PORTAINER_WEBHOOK_URL }}
