@@ -4,7 +4,6 @@ from data import *
 
 app = Flask("portfolio")
 data = load("data.json")
-project_list = []
 
 
 @app.context_processor
@@ -12,8 +11,7 @@ def global_variables():
     data = load("data.json")
     return {
         'list_of_techniques': get_techniques(data),
-        'list_of_fields': get_search_fields(),
-        'latest_project': search(data, sort_by="end_date")[0]
+        'list_of_fields': get_search_fields()
     }
 
 
@@ -30,13 +28,15 @@ def index():
 @app.route("/techniques")
 def techniques():
     tech_list = get_techniques(data)
-    return render_template("techniques.html", list_of_techniques = tech_list)
+    return render_template("techniques.html", list_of_techniques=tech_list)
 
 
 @app.route("/projects/<search_val>")
 def projects(search_val):
     title = str("")
     data = load("data.json")
+    project_list = []
+
     if search_val == 'all':
         project_list = search(data)
         title = "All projects"
@@ -57,7 +57,7 @@ def project(project_id):
 
     if data == None:
         title = "Page not found!"
-        return render_template("404.html")    
+        return render_template("404.html")
     for d in data:
         if int(d["project_id"]) == int(project_id):
             title = d["project_name"]
