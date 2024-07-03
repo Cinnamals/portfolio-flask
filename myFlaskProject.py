@@ -58,6 +58,7 @@ def project(project_id):
     if data == None:
         title = "Page not found!"
         return render_template("404.html")
+
     for d in data:
         if int(d["project_id"]) == int(project_id):
             title = d["project_name"]
@@ -83,8 +84,8 @@ def search_site():
             result = search(data, search=search_term[0], techniques=tech_arg,
                             sort_order=sort_order_arg[0], sort_by=sort_by_arg[0], search_fields=allowed_field_arg)
         except Exception as err:
-            print("there was an error with the search result: ", err)
             result = []
+            print("there was an error with the search result: ", err)
 
         return render_template("projects.html", list_of_projects=result, title=title)
     else:

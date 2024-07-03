@@ -15,11 +15,11 @@ class="active"
     <h3 class="content_title">{{project_to_render.project_name}}</h3>
     <h4 class="short_description">{{project_to_render.short_description}}</h4>
     <h4 class="long_description" style="white-space: pre-line"><br>{{project_to_render.long_description}}</h4>
-      <center>
+    <center>
       {% if project_to_render.demo_link %}
       <a href="{{project_to_render.demo_link}}" class="button" target="_blank">Demo</a>
       {% endif %}
-      
+
       {% if project_to_render.github_link %}
       <a href="{{project_to_render.github_link}}" class="button" target="_blank">GitHub</a>
       {% endif %}
@@ -28,29 +28,29 @@ class="active"
       <a href="{{project_to_render.gitlab_link}}" class="button" target="_blank">GitLab</a>
       {% endif %}
     </center>
-     
-  </div>
+  </div> <!-- end of main_project_content -->
+
   <div class="project_image_holder">
     <center>
       <img class ="big_image" src="{{url_for('static', filename=project_to_render.big_image)}}" alt="{{project_to_render.project_name}}">
       </center>
-  </div>
-</div>
+  </div> <!-- end of project_image_holder -->
+</div> <!-- end of project_content_container -->
 
 <div>
   <div class="tech_container_proj">
-    <h4>Techniques used:</h4>    
+    <h4>Techniques used:</h4>
     {% for tech in project_to_render.techniques_used %}
     <a class="project_link" href="{{url_for('projects', search_val=tech)}}">
       <img class="techniques_image_logo" src="{{ url_for('static', filename='images/' + tech + '.png') }}" alt="{{tech}}">
-    </ah>    
+    </a>
     {% endfor %}
-  </div>
-  
+  </div> <!-- end of tech_container_proj -->
+
   <div class="date_container">
     <h5 class="start_date">Start date: {{project_to_render.start_date}}</h5>
     <h5 class="end_date">End date: {{project_to_render.end_date}}</h5>
-  </div>
-</div>    
+  </div> <!-- end of date_container -->
+</div>
 
 {% endblock %}

@@ -10,17 +10,17 @@ class="active"
 
 {% block main_content %}
 
-<div class="search-big" id="big-box">
+<div class="search-container" id="big-box">
   <form action="{{url_for('search_site')}}" method="post" style="display: inline;">
 
-    <div class="search-bar-container" id="search-bar-container"> 
-      <input type="text" id="searchterm-big" name="searchterm" placeholder="Search term..." style="font-family:trial;">
+    <div class="search-bar-container" id="search-bar-container">
+      <input type="text" id="searchterm" name="searchterm" placeholder="Search term..." style="font-family:trial;">
       <label for="clear-button" class="image-button clear-button">
         <img src="{{ url_for('static', filename='images/clear.png') }}" alt="Clear" style="width: 50px;">
       </label>
       <label for="submit-button" class="image-button submit-button">
         <img src="{{ url_for('static', filename='images/submit.png') }}" alt="Submit" style="width: 60px;">
-      </label>      
+      </label>
       <input type="reset" id="clear-button" value="Clear">
       <input type="submit" id="submit-button" value="Submit">
 
@@ -33,8 +33,8 @@ class="active"
               <input type="checkbox" name="tech" id="tech" value="{{field}}">{{field.title()}}<br>
             </checkbox>
             {% endfor %}
-          </div>
-        </div> <!-- end of dropdown-checkboxes -->
+          </div> <!-- end of dropdown-checkboxes -->
+        </div> <!-- end of button-container -->
 
         <div class="dropdown-checkboxes">
           <button class="image-button searchfield-button"><h5>Allowed searchfields:</h5></button>
@@ -44,13 +44,13 @@ class="active"
               <input type="checkbox" name="f" id="f" value="{{field}}">{{field.replace('_', ' ').title() }}<br>
             </checkbox>
             {% endfor %}
-          </div>
+          </div> <!-- end of dropdown-content -->
         </div> <!-- end of dropdown-checkboxes -->
-        
+
       </div> <!-- end of button-container -->
     </div> <!-- end of search-bar-container -->
   </form>
-</div>
+</div> <!-- end of search-container -->
 
 <div class="tech_container">
   {% for project in list_of_projects %}
@@ -58,11 +58,11 @@ class="active"
     <div class="tech">
       <img class="small_image" src="{{url_for('static', filename=project.small_image)}}" alt="{{project.project_name}}">
       <h5 class="small_project_title">{{project.project_name}}</h5>
-      
+
       {% if project.demo_link %}
       <a href="{{project.demo_link}}" class="button" target="_blank">Demo</a>
       {% endif %}
-      
+
       {% if project.github_link %}
       <a href="{{project.github_link}}" class="button" target="_blank">GitHub</a>
       {% endif %}
@@ -70,10 +70,10 @@ class="active"
       {% if project.gitlab_link %}
       <a href="{{project.gitlab_link}}" class="button" target="_blank">GitLab</a>
       {% endif %}
-      
-    </div>
+
+    </div> <!-- end of tech -->
   </a>
   {% endfor %}
-</div>
+</div> <!-- end of tech_container -->
 
 {% endblock %}

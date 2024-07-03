@@ -11,23 +11,25 @@ class="active"
 {% block main_content %}
 
 <div class="main_content_welcome">
-  <div class="main_content_welcome_paragraph">  
-         <a href="{{url_for('index')}}">
-           <img src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
-         </a>
-         Touched a keyboard and never really stopped.<br>
-         <i>Alright, there were some caveats</i><div><br>
-           While being up for anything, <br><i>C++, Python and Ruby</i><br>
-           has eaten most of my days.<br><br>
-           I consider my self a mixed martial artist - dabbling in
-           <br><i><b>Software Development</b>, <b>System Administration</b></i><br>
-           and begrudingly a bit of <i><b>Frontend Development</b>.</i></div>
-  </div>
+  <div class="main_content_welcome_paragraph">
+    <a href="{{url_for('index')}}">
+      <img src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
+    </a>
+    Touched a keyboard and never really stopped.<br>
+    <i>Alright, there were some caveats...</i><div><br>
+      While being up for anything,
+      <br><i>C++, Python and Ruby</i><br>
+      has eaten most of my days.<br><br>
+      I consider my self a mixed martial artist - dabbling in
+      <br><i><b>Software Development</b>, <b>System Administration</b></i><br>
+      and begrudingly a bit of <i><b>Frontend Development</b>.</i></div>
+  </div> <!-- end of main_content_welcome_paragraph -->
+
   <div class="avatar">
     <a href="{{url_for('index')}}">
       <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="Techniques">
-    </a>        
-  </div>   
+    </a>
+  </div> <!-- end of avatar -->
 </div>
 
  <div class="main_content">
@@ -45,12 +47,12 @@ Curabitur at eleifend tellus. Donec pellentesque diam rutrum justo pharetra, nec
           Vivamus ac ex ultricies, convallis libero non, vehicula augue. Aliquam fermentum auctor enim, ut tincidunt enim gravida nec. Pellentesque tellus risus, tempor vel sem vel, congue mattis quam. Morbi eleifend pellentesque lacinia. Phasellus gravida mauris ut placerat interdum. Donec maximus vehicula tortor eget pulvinar. Curabitur tristique rhoncus sodales. In metus metus, rutrum non scelerisque eget, facilisis eu mi. Praesent pellentesque, justo malesuada sodales lacinia, mi lorem venenatis ligula, eget faucibus eros est eu erat. Ut vulputate ante sem, in vestibulum tortor efficitur semper. Ut semper magna ac enim volutpat rhoncus.</p>
    <p>
           Vivamus volutpat fermentum erat convallis pulvinar. Mauris pretium, massa id rhoncus mollis, metus nunc fermentum dui, vitae pellentesque nibh tortor ac urna. Duis lobortis ex augue. Suspendisse ac eleifend augue, vitae tincidunt magna. Mauris id fermentum nibh. In risus augaue, viverra in lobortis in, iaculis et massa. In egestas quam ut nisl iaculis malesuada.</p>
- </div>
+ </div> <!-- end of main_content -->
 
  <div class="logo">
    <a href="{{url_for('index')}}">
      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Techniques">
-   </a>        
- </div>
+   </a>
+ </div> <!-- end of logo -->
 
 {% endblock %}
